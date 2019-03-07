@@ -82,7 +82,6 @@ By default `dnamalci()` estimates the 144 CpG model from Liu et all, but all DNA
 
 ```{r}
 dnamalc.5cpg <- dnamalci(betas, model = "dnamalc.5cpg")
-head(dnam.alc$score)
 ```
 
 
