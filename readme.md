@@ -5,8 +5,8 @@
 dnamalci
 ========
 
-This package provides functions to easily apply the DNA methylation
-alcohol scores (DNAm-Alcs) generated in:
+`dnamalci` is an R-package that provides functions to easily apply the
+DNA methylation alcohol scores (DNAm-Alcs) generated in:
 
 > Liu C, Marioni RE, Hedman ÅK, Pfeiffer L, Tsai P-C, Reynolds LM et al.
 > A DNA methylation biomarker of alcohol consumption. Mol Psychiatry
