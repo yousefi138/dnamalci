@@ -1,7 +1,10 @@
 Package: dnamalci
-Title: What the Package Does (one line, title case)
+Title: Easy estimation of DNA methylation alcohol (DNAm-Alcs) scores 
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Authors@R: as.person(c(
+    "Paul Darius Yousefi <paul.yousefi@bristol.ac.uk> [aut, cre]", 
+    "Matthew Suderman <matthewsuderman@hotmail.com> [aut, cre]"
+  ))
 Description: What the package does (one paragraph).
 Depends: R (>= 3.3.1)
 License: What license is it under?
