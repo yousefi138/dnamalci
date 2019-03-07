@@ -54,6 +54,15 @@ This dataset is publicly available at GEO accession number [GSE50660](https://ww
 betas <- dnamalci.load.test.data()
 ```
 
+The only requirements of user supplied beta values for `dnamalci` are that they:
+
+* be contained in a matrix-formatted object where rows are CpG sites and columns are samples
+* `rownames` must contain CpG site names 
+
+```{r}
+head(rownames(betas))
+```
+
 ### View available DNAm-Alcs
 
 List the 4 flavors of DNAm-Alcs derived in Liu et al. 2016 that are available for implementation in `dnamalci`:
@@ -69,11 +78,11 @@ dnam.alc <- dnamalci(betas)
 head(dnam.alc$score)
 ```
 
-Default is to estimate the 144 CpG model from Liu et all, but all DNAm-Alcs can be estimated by specifying the `model` argument:
+By default `dnamalci()` estimates the 144 CpG model from Liu et all, but all DNAm-Alcs can be estimated by specifying the `model` argument:
 
 ```{r}
 dnamalc.5cpg <- dnamalci(betas, model = "dnamalc.5cpg")
-
+head(dnam.alc$score)
 ```
 
 
