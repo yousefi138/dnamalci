@@ -7,5 +7,6 @@
 
 dnamalci.load.test.data <- function(){
 	path <- system.file("gse50660", package="dnamalci")                               
-	read.csv(file.path(path, "gse50660.csv"), row.names = 1, stringsAsFactors=F)
+	as.matrix(read.csv(file.path(path, "gse50660.csv"), 
+			row.names = 1, stringsAsFactors=F))
 }

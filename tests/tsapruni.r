@@ -18,10 +18,10 @@ write.csv(beta, file = "dnamalci/inst/gse50660.csv")
 dnamalci.models()
 
 ## apply the default model to methylation data
-dnam.alc <- dnamalci.score(betas)
-str(dnam.alc)
+dnam.alc <- dnamalci(betas)
+head(dnam.alc)
 
 
-dnamalc.5cpg <- dnamalci.score(betas, model = "dnamalc.5cpg")
-str(dnamalc.5cpg)
+dnamalc.5cpg <- dnamalci(betas, model = "dnamalc.5cpg")
+head(dnamalc.5cpg)
 

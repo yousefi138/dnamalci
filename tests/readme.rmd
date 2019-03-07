@@ -29,7 +29,7 @@ echo = TRUE,
 warning = FALSE, 
 message = FALSE,
 width=85,
-eval = FALSE)
+eval = TRUE)
 ```
 
 ```{r, eval = F}
@@ -40,6 +40,8 @@ install_github("yousefi138/dnamalci")
 
 ## Example use
 
+### Load a DNA methylation beta matrix
+
 First, load a matrix of DNA methylation beta values of your choosing. 
 
 `dnamalci` installs with a test dataset which is a subset of results from:
@@ -48,9 +50,30 @@ First, load a matrix of DNA methylation beta values of your choosing.
 
 This dataset is publicly available at GEO accession number [GSE50660](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50660) : 
 
-```{r, eval = F}
+```{r}
 betas <- dnamalci.load.test.data()
 ```
 
+### View available DNAm-Alcs
+
+List the 4 flavors of DNAm-Alcs derived in Liu et al. 2016 that are available for implementation in `dnamalci`:
+
+```{r}
+dnamalci.models()
+```
+
+### Estimate the DNAm-Alc score from your target DNA methylation beta matrix
+
+```{r}
+dnam.alc <- dnamalci(betas)
+head(dnam.alc$score)
+```
+
+Default is to estimate the 144 CpG model from Liu et all, but all DNAm-Alcs can be estimated by specifying the `model` argument:
+
+```{r}
+dnamalc.5cpg <- dnamalci(betas, model = "dnamalc.5cpg")
+
+```
 
 

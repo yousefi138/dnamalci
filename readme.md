@@ -25,6 +25,8 @@ following commands:
 Example use
 -----------
 
+### Load a DNA methylation beta matrix
+
 First, load a matrix of DNA methylation beta values of your choosing.
 
 `dnamalci` installs with a test dataset which is a subset of results
@@ -40,3 +42,19 @@ This dataset is publicly available at GEO accession number
 :
 
     betas <- dnamalci.load.test.data()
+
+### View available DNAm-Alcs
+
+List the 4 flavors of DNAm-Alcs derived in Liu et al. 2016 that are
+available for implementation in `dnamalci`:
+
+    dnamalci.models()
+
+    > [1] "dnamalc.144cpg" "dnamalc.23cpg"  "dnamalc.5cpg"   "dnamalc.78cpg"
+
+### Estimate the DNAm-Alc score from your target DNA methylation beta matrix
+
+    dnam.alc <- dnamalci(betas)
+    head(dnam.alc$score)
+
+    > [1] -6.507850 -5.925996 -6.821262 -6.486209 -6.858420 -6.774091

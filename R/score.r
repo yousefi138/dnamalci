@@ -6,7 +6,7 @@
 #' @return Scores derived for each sample in \code{x}.
 #'
 #' @export
-dnamalci.score <- function(x, model = "dnamalc.144cpg") {
+dnamalci <- function(x, model = "dnamalc.144cpg") {
     stopifnot(is.matrix(x))
 
     ret <- dnamalci.get.model(model)
