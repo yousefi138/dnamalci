@@ -15,8 +15,9 @@ dnamalci.models()
 
 ## apply the default model to methylation data
 dnam.alc <- dnamalci.score(betas)
+str(dnam.alc)
 
 
-dnam.alc <- dnamalci.score(betas, model = "dnamalc.78cpg")
-
+dnamalc.5cpg <- dnamalci.score(betas, model = "dnamalc.5cpg")
+str(dnamalc.5cpg)
 

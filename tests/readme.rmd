@@ -1,0 +1,37 @@
+---
+title: "dnamalci: functions for easily applying DNA methylation alcohol scores"
+author: "Paul Yousefi"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::md_document:
+    toc: true
+    toc_depth: 2
+---
+
+
+# dnamalci
+
+Functions for easily applying DNA methylation alcohol scores (DNAm-Alcs)
+
+
+## Installation
+
+Only a few steps are needed to install `dnamalci` in R. Just run the following commands:
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(
+comment = ">",
+error = FALSE,
+tidy = FALSE,
+echo = TRUE, 
+warning = FALSE, 
+message = FALSE,
+width=85,
+eval = FALSE)
+```
+
+```{r, eval = F}
+install.packages("devtools") # if the devtools package is not installed
+library(devtools)
+install_github("perishky/meffil")
+```
