@@ -16,18 +16,9 @@ dnamalci.score <- function(x, model = "dnamalc.144cpg") {
 
     score <- rep(NA, ncol(x))
     if (length(sites) == 1)
-        score <- ret$intercept + ret$coefficients[sites] * x[sites,]
+        score <- ret$coefficients[sites] * x[sites,]
     if (length(sites) > 1)
-        score <- ret$intercept + as.vector(rbind(ret$coefficients[sites]) %*% x[sites,,drop=F])
-
-    if (model == "age.horvath") {
-        anti.trafo <- function(x,adult.age=20) {
-            ifelse(x<0,
-                   (1+adult.age)*exp(x)-1,
-                   (1+adult.age)*x+adult.age)
-        }
-        score <- anti.trafo(score)
-    }
+        score <- as.vector(rbind(ret$coefficients[sites]) %*% x[sites,,drop=F])
 
     ret$sites <- sites
     ret$score <- score

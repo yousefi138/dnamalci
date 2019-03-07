@@ -31,7 +31,7 @@ dnamalci.get.model <- function(name) {
 create.model <- function(variables, coefficients, description) {
     stopifnot(length(variables) == length(coefficients))
     names(coefficients) <- variables
-    list(intercept=coefficients[1], coefficients=coefficients[-1], description=description)
+    list(coefficients=coefficients, description=description)
 }
 
 load.models <- function(pkgname) {
@@ -43,16 +43,19 @@ load.models <- function(pkgname) {
                          readLines(file.path(path, "readme.txt")))
 
     ## 78
-    dnamalci.add.model("dnamalc.78cpg", model$cpg, model$dnamalc.78cpg,
-                         readLines(file.path(path, "readme.txt")))
+    with(subset(model, !is.na(dnamalc.78cpg)), 
+    dnamalci.add.model("dnamalc.78cpg", cpg, dnamalc.78cpg,
+                         readLines(file.path(path, "readme.txt"))) )
 
     ## 23
-    dnamalci.add.model("dnamalc.23cpg", model$cpg, model$dnamalc.23cpg,
-                         readLines(file.path(path, "readme.txt")))
+    with(subset(model, !is.na(dnamalc.23cpg)), 
+    dnamalci.add.model("dnamalc.23cpg", cpg, dnamalc.23cpg,
+                         readLines(file.path(path, "readme.txt"))))
 
     ## 5
-    dnamalci.add.model("dnamalc.5cpg", model$cpg, model$dnamalc.5cpg,
-                         readLines(file.path(path, "readme.txt")))                             
+    with(subset(model, !is.na(dnamalc.5cpg)), 
+    dnamalci.add.model("dnamalc.5cpg", cpg, dnamalc.5cpg,
+                         readLines(file.path(path, "readme.txt"))))
     
 }
 
