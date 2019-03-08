@@ -3,9 +3,7 @@ title: "dnamalci: functions for easily applying DNA methylation alcohol scores"
 author: "Paul Yousefi"
 date: "`r Sys.Date()`"
 output: 
-  rmarkdown::md_document:
-    toc: true
-    toc_depth: 2
+  rmarkdown::md_document: default
 ---
 
 
@@ -51,6 +49,7 @@ First, load a matrix of DNA methylation beta values of your choosing.
 This dataset is publicly available at GEO accession number [GSE50660](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50660) : 
 
 ```{r}
+library(dnamalci)
 betas <- dnamalci.load.test.data()
 ```
 

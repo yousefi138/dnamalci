@@ -1,7 +1,3 @@
--   [dnamalci](#dnamalci)
-    -   [Installation](#installation)
-    -   [Example use](#example-use)
-
 dnamalci
 ========
 
@@ -41,6 +37,7 @@ This dataset is publicly available at GEO accession number
 [GSE50660](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50660)
 :
 
+    library(dnamalci)
     betas <- dnamalci.load.test.data()
 
 The only requirements of user supplied beta values for `dnamalci` are
