@@ -4,7 +4,8 @@
 #' Tsaprouni et al. 2014 data available at the
 #' Gene Expression Omnibus (GEO), accession number GSE50660:
 #' https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50660
-
+#' 
+#' @export
 dnamalci.load.test.data <- function(){
 	path <- system.file("gse50660", package="dnamalci")                               
 	as.matrix(read.csv(file.path(path, "gse50660.csv"), 

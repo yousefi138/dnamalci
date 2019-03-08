@@ -3,4 +3,5 @@
 export(dnamalci)
 export(dnamalci.add.model)
 export(dnamalci.get.model)
+export(dnamalci.load.test.data)
 export(dnamalci.models)
