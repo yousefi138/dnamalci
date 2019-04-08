@@ -2,11 +2,18 @@ dnamalci
 ========
 
 `dnamalci` is an R-package that provides functions to easily apply the
-DNA methylation alcohol scores (DNAm-Alcs) generated in:
+DNA methylation alcohol scores (DNAm-Alcs) generated and characterized
+in :
 
-> Liu C, Marioni RE, Hedman ÅK, Pfeiffer L, Tsai P-C, Reynolds LM et al.
-> A DNA methylation biomarker of alcohol consumption. Mol Psychiatry
-> 2016. <doi:10.1038/mp.2016.192>.
+> Liu C, Marioni RE, Hedman ÅK, Pfeiffer L, Tsai P-C, Reynolds LM et
+> al. A DNA methylation biomarker of alcohol consumption. Mol Psychiatry
+> 2016.
+> <a href="doi:10.1038/mp.2016.192" class="uri">doi:10.1038/mp.2016.192</a>.
+
+> Yousefi PD, Richmond R, Langdon R, Ness A, Liu C, Levy D et
+> al. Validation and characterization of a DNA methylation alcohol
+> biomarker across the life course. bioRxiv 2019.
+> <a href="doi:10.1101/591404" class="uri">doi:10.1101/591404</a>.
 
 Installation
 ------------
@@ -28,9 +35,9 @@ First, load a matrix of DNA methylation beta values of your choosing.
 `dnamalci` installs with a test dataset which is a subset of results
 from:
 
-> Tsaprouni LG, Yang T-P, Bell J, Dick KJ, Kanoni S, Nisbet J et al.
-> Cigarette smoking reduces DNA methylation levels at multiple genomic
-> loci but the effect is partially reversible upon cessation.
+> Tsaprouni LG, Yang T-P, Bell J, Dick KJ, Kanoni S, Nisbet J et
+> al. Cigarette smoking reduces DNA methylation levels at multiple
+> genomic loci but the effect is partially reversible upon cessation.
 > Epigenetics 2014; 9: 1382–1396.
 
 This dataset is publicly available at GEO accession number
@@ -56,8 +63,8 @@ that they:
 
 ### View available DNAm-Alcs
 
-List the 4 flavors of DNAm-Alcs derived in Liu et al. 2016 that are
-available for implementation in `dnamalci`:
+List the 4 flavors of DNAm-Alcs from Liu et al. 2016 and Yousefi et
+al. 2019 that are available for implementation in `dnamalci`:
 
     dnamalci.models()
 
